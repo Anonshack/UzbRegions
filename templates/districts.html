@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}
+    Districts list
+{% endblock %}
+{% block content %}
+    <h1>Districts list</h1>
+    <ul>
+        {% for district in object_list %}
+            <li>{{ district.district_name }}</li>
+        {% endfor %}
+    </ul>
+
+    <script>
+        function setLang(lang) {
+            const Http = new XMLHttpRequest();
+            const url='/setLang/' + lang;
+            Http.open("GET", url);
+            Http.send();
+
+            Http.onreadystatechange = (e) => {
+                location.reload();
+            }
+        }
+    </script>
+{% endblock %}

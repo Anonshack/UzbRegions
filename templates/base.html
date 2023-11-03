@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}
+    Uzb regions
+    {% endblock %}</title>
+</head>
+<body>
+    <div>
+        <div style="float: right">
+            <button onclick="setLang('uz')">UZ</button>
+            <button onclick="setLang('en')">EN</button>
+            <button onclick="setLang('ru')">RU</button>
+        </div>
+        <h1>Uzbekistan</h1>
+        {% block content %}
+        
+        {% endblock %}
+    </div>
+</body>
+</html>
